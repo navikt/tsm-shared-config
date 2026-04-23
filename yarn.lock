@@ -206,6 +206,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@navikt/tsm-oxfmt@workspace:libs/oxfmt":
+  version: 0.0.0-use.local
+  resolution: "@navikt/tsm-oxfmt@workspace:libs/oxfmt"
+  peerDependencies:
+    oxfmt: ">= 0"
+  languageName: unknown
+  linkType: soft
+
 "@navikt/tsm-prettier@workspace:*, @navikt/tsm-prettier@workspace:libs/prettier":
   version: 0.0.0-use.local
   resolution: "@navikt/tsm-prettier@workspace:libs/prettier"

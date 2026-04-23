@@ -1,0 +1,40 @@
+name: Release @navikt/tsm-oxfmt
+
+on:
+  push:
+    paths:
+      - .github/workflows/release-oxfmt.yml
+      - libs/oxfmt/**
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      packages: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: '0'
+      - run: corepack enable
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          registry-url: https://npm.pkg.github.com
+          cache: yarn
+
+      - run: yarn --immutable
+
+      - name: Publish package
+        if: github.ref == 'refs/heads/main'
+        run: |
+          ./scripts/create-release.sh oxfmt
+          ./scripts/set-version.sh oxfmt
+          cd libs/oxfmt && yarn npm publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
