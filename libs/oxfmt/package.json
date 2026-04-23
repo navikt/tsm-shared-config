@@ -8,13 +8,19 @@
         "registry": "https://npm.pkg.github.com/"
     },
     "exports": {
-        ".": "./oxfmt.json"
+        ".": "./oxfmt.config.ts"
+    },
+    "scripts": {
+        "fmt": "oxfmt"
     },
     "files": [
-        "oxfmt.json",
+        "oxfmt.config.ts",
         "package.json",
         "README.md"
     ],
+    "devDependencies": {
+        "oxfmt": "^0.46.0"
+    },
     "peerDependencies": {
         "oxfmt": ">= 0"
     }
