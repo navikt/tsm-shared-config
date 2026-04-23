@@ -1,23 +1,23 @@
 {
     "name": "@navikt/tsm-oxfmt",
     "version": "0.0.1",
-    "type": "module",
     "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": "./oxfmt.config.mjs"
+    },
     "publishConfig": {
         "access": "public",
         "registry": "https://npm.pkg.github.com/"
     },
-    "exports": {
-        ".": "./oxfmt.config.ts"
-    },
-    "scripts": {
-        "fmt": "oxfmt"
-    },
     "files": [
-        "oxfmt.config.ts",
+        "oxfmt.config.mjs",
         "package.json",
         "README.md"
     ],
+    "scripts": {
+        "fmt": "oxfmt -c ./oxfmt.config.mjs"
+    },
     "devDependencies": {
         "oxfmt": "^0.46.0"
     },
