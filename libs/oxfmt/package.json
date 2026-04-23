@@ -11,7 +11,7 @@
         ".": "./oxfmt.json"
     },
     "files": [
-        "biome.json",
+        "oxfmt.json",
         "package.json",
         "README.md"
     ],
