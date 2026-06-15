@@ -4,7 +4,10 @@
     "license": "MIT",
     "type": "module",
     "exports": {
-        ".": "./oxfmt.config.mjs"
+        ".": {
+            "types": "./oxfmt.config.d.ts",
+            "import": "./oxfmt.config.mjs"
+        }
     },
     "publishConfig": {
         "access": "public",
@@ -12,14 +15,15 @@
     },
     "files": [
         "oxfmt.config.mjs",
+        "oxfmt.config.d.ts",
         "package.json",
         "README.md"
     ],
     "scripts": {
-        "fmt": "oxfmt -c ./oxfmt.config.mjs"
+        "fmt": "oxfmt -c oxfmt.config.mjs"
     },
     "devDependencies": {
-        "oxfmt": "^0.46.0"
+        "oxfmt": "^0.54.0"
     },
     "peerDependencies": {
         "oxfmt": ">= 0"
