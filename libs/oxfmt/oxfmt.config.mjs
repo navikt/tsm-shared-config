@@ -9,6 +9,13 @@ export default defineConfig({
     sortPackageJson: false,
     overrides: [
         {
+            files: ['*.md', '*.mdx'],
+            options: {
+                printWidth: 100,
+                tabWidth: 2,
+            },
+        },
+        {
             files: ['*.yml', '*.yaml'],
             options: {
                 printWidth: 100,
