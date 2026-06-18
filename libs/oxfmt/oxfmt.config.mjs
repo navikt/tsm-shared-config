@@ -7,6 +7,21 @@ export default defineConfig({
     printWidth: 120,
     tabWidth: 4,
     sortPackageJson: false,
+    sortImports: {
+        newlinesBetween: true,
+        groups: [
+            // [":NODE:", ":PACKAGE:"]
+            ['builtin', 'external'],
+            // :ALIAS:
+            'internal',
+            // ../**
+            'parent',
+            // ./**
+            'sibling',
+            // ./index
+            'index',
+        ],
+    },
     overrides: [
         {
             files: ['*.md', '*.mdx'],
