@@ -28,6 +28,7 @@ export default defineConfig({
             options: {
                 printWidth: 100,
                 tabWidth: 2,
+                proseWrap: "always"
             },
         },
         {
