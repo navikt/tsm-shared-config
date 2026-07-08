@@ -1,0 +1,26 @@
+{
+    "name": "@tsm/oxlint-config",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./base.config.d.ts",
+            "import": "./base.config.js"
+        },
+        "./react": {
+            "types": "./react.config.d.ts",
+            "import": "./react.config.js"
+        }
+    },
+    "files": [
+        "base.config.js",
+        "base.config.d.ts",
+        "react.config.js",
+        "react.config.d.ts"
+    ],
+    "peerDependencies": {
+        "oxlint": ">= 1"
+    },
+    "devDependencies": {
+        "oxlint": "^1.73.0"
+    }
+}

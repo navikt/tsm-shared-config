@@ -1,10 +1,10 @@
-name: Release @navikt/tsm-prettier
+name: Release @navikt/tsm-oxlint
 
 on:
   push:
     paths:
-      - .github/workflows/release-prettier.yml
-      - libs/prettier/**
+      - .github/workflows/release-oxlint.yml
+      - libs/oxlint/**
 
 permissions:
   contents: read
@@ -32,9 +32,9 @@ jobs:
       - name: Publish package
         if: github.ref == 'refs/heads/main'
         run: |
-          ./scripts/create-release.sh prettier
-          ./scripts/set-version.sh prettier
-          cd libs/prettier && yarn npm publish
+          ./scripts/create-release.sh oxlint
+          ./scripts/set-version.sh oxlint
+          cd libs/oxlint && yarn npm publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
