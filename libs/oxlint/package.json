@@ -1,5 +1,7 @@
 {
     "name": "@tsm/oxlint-config",
+    "version": "0.0.1",
+    "license": "MIT",
     "type": "module",
     "exports": {
         ".": {
@@ -10,6 +12,10 @@
             "types": "./react.config.d.ts",
             "import": "./react.config.js"
         }
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://npm.pkg.github.com/"
     },
     "files": [
         "base.config.js",
