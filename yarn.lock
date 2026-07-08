@@ -216,6 +216,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@navikt/tsm-oxlint@workspace:libs/oxlint":
+  version: 0.0.0-use.local
+  resolution: "@navikt/tsm-oxlint@workspace:libs/oxlint"
+  dependencies:
+    oxlint: "npm:^1.73.0"
+  peerDependencies:
+    oxlint: ">= 1"
+  languageName: unknown
+  linkType: soft
+
 "@navikt/tsm-prettier@workspace:*, @navikt/tsm-prettier@workspace:libs/prettier":
   version: 0.0.0-use.local
   resolution: "@navikt/tsm-prettier@workspace:libs/prettier"
@@ -530,16 +540,6 @@ __metadata:
   checksum: 10c0/b5bcfb0d87f7d1c1c7c0f7693f53b07866ed9fec4c34a97a8c948fb9a7c0082e416ce4d3b60beb4f5e167cbe04cdeefbf6771320f3ede059b9ce91188c409a5b
   languageName: node
   linkType: hard
-
-"@tsm/oxlint-config@workspace:libs/oxlint":
-  version: 0.0.0-use.local
-  resolution: "@tsm/oxlint-config@workspace:libs/oxlint"
-  dependencies:
-    oxlint: "npm:^1.73.0"
-  peerDependencies:
-    oxlint: ">= 1"
-  languageName: unknown
-  linkType: soft
 
 "@types/estree@npm:^1.0.6":
   version: 1.0.8
