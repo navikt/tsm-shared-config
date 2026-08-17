@@ -3,6 +3,7 @@ import { defineConfig } from 'oxlint'
 export default defineConfig({
     plugins: ["typescript", "oxc", "unicorn", "import", "promise"],
     rules: {
+        'typescript/only-throw-error': 'error',
         'no-console': 'warn',
         'no-unused-expressions': 'warn',
         'no-array-constructor': 'warn',
