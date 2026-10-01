@@ -23,7 +23,7 @@
         "fmt": "oxfmt -c oxfmt.config.mjs"
     },
     "devDependencies": {
-        "oxfmt": "^0.64.0"
+        "oxfmt": "^0.70.0"
     },
     "peerDependencies": {
         "oxfmt": ">= 0"
